@@ -191,7 +191,7 @@ def find_hash(recipe):
 
 
 def _find_hash_pypi(project, version, filename, hash_type):
-    url = 'https://pypi.org/pypi/{}/{}/json'.format(project, version)
+    url = 'https://pypi.org/pypi/{}/json'.format(project, version)
     r = requests.get(url)
     payload = r.json()
     release = payload['releases'][str(version)]
